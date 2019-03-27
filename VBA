@@ -1,0 +1,23 @@
+Ref:https://qiita.com/satoko138/items/7e06dda56683065968f7
+
+'--------------------------------------------------------------
+'機能：引数が配列か判定し、配列の場合は空かどうかも判定する
+'戻り値：判定結果（1:配列 / 0:空の配列 / -1:配列ではない
+'--------------------------------------------------------------
+Public Function isArrayEx(varArray As Variant) As Long
+On Error GoTo ERROR_
+    If IsArray(varArray) Then
+        isArrayEx = IIf(UBound(varArray) >= 0, 1, 0)
+    Else
+        isArrayEx = -1
+    End If
+
+    Exit Function
+
+ERROR_:
+    If Err.Number = 9 Then
+        isArrayEx = 0
+    Else
+        '想定外エラー
+    End If
+End Function
