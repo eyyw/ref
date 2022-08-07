@@ -3,7 +3,7 @@ For 64bit = "cd /d %ProgramFiles%\Microsoft Office\Office16"
 For 32bit = "cd /d %ProgramFiles(x86)%\Microsoft Office\Office16"
 
 
-cd /d %ProgramFiles(x86)%\Microsoft Office\Office16
+cd /d %ProgramFiles%\Microsoft Office\Office16
 
 cscript ospp.vbs /dstatus
 
@@ -11,6 +11,14 @@ for /f %x in ('dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') do cscript ospp
 
 cscript ospp.vbs /setprt:1688
 cscript ospp.vbs /unpkey:6MWKP >nul
+
+#Office Professional Plus 2016
+cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
+#Office Professional Plus 2019
 cscript ospp.vbs /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP
-cscript ospp.vbs /sethst:s8.uk.to
+#Office LTSC Professional Plus 2021
+cscript ospp.vbs /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH
+
+#cscript ospp.vbs /sethst:s8.uk.to
+cscript ospp.vbs /sethst:192.168.43.128
 cscript ospp.vbs /act
