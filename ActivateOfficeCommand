@@ -1,3 +1,5 @@
+下記のコマンドがWindowsのcmd（管理者権限）で実施してください。　
+
 
 For 32bit = "cd /d %ProgramFiles(x86)%\Microsoft Office\Office16"
 For 64bit = "cd /d %ProgramFiles%\Microsoft Office\Office16"
